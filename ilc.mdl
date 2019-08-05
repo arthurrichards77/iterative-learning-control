@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.17"
+    ComputedModelVersion    "1.21"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -27,74 +27,39 @@ Model {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
     $ClassName		    "Simulink.BDWindowsInfo"
-    Array {
-      Type		      "Simulink.WindowInfo"
-      Dimension		      2
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [224.0, 262.0, 1026.0, 606.0]
       Object {
-	$ObjectID		2
-	IsActive		[0]
-	Location		[630.0, 109.0, 720.0, 670.0]
-	Object {
-	  $PropName		  "ModelBrowserInfo"
-	  $ObjectID		  3
-	  $ClassName		  "Simulink.ModelBrowserInfo"
-	  Visible		  [0]
-	  DockPosition		  "Left"
-	  Width			  [50]
-	  Height		  [50]
-	  Filter		  [8]
-	}
-	Object {
-	  $PropName		  "ExplorerBarInfo"
-	  $ObjectID		  4
-	  $ClassName		  "Simulink.ExplorerBarInfo"
-	  Visible		  [1]
-	}
-	Object {
-	  $PropName		  "EditorsInfo"
-	  $ObjectID		  5
-	  $ClassName		  "Simulink.EditorInfo"
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "4"
-	  Extents		  [666.0, 477.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [0.0, 0.0]
-	}
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[8]
       }
       Object {
-	$ObjectID		6
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	Location		[224.0, 262.0, 1026.0, 606.0]
-	Object {
-	  $PropName		  "ModelBrowserInfo"
-	  $ObjectID		  7
-	  $ClassName		  "Simulink.ModelBrowserInfo"
-	  Visible		  [0]
-	  DockPosition		  "Left"
-	  Width			  [50]
-	  Height		  [50]
-	  Filter		  [8]
-	}
-	Object {
-	  $PropName		  "ExplorerBarInfo"
-	  $ObjectID		  8
-	  $ClassName		  "Simulink.ExplorerBarInfo"
-	  Visible		  [1]
-	}
-	Object {
-	  $PropName		  "EditorsInfo"
-	  $ObjectID		  9
-	  $ClassName		  "Simulink.EditorInfo"
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [972.0, 413.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [0.0, 0.0]
-	}
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[972.0, 413.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
       }
-      PropName		      "WindowsInfo"
     }
   }
   Created		  "Thu Mar 13 14:13:33 2014"
@@ -103,9 +68,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "aeagr"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Aug 05 17:27:56 2019"
-  RTWModifiedTimeStamp	  486926873
-  ModelVersionFormat	  "1.%<AutoIncrement:17>"
+  LastModifiedDate	  "Mon Aug 05 17:46:03 2019"
+  RTWModifiedTimeStamp	  486927910
+  ModelVersionFormat	  "1.%<AutoIncrement:21>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -153,7 +118,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    10
+    $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "ilc"
     signals_		    []
@@ -198,16 +163,16 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      11
+      $ObjectID		      7
       Version		      "1.16.2"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  12
+	  $ObjectID		  8
 	  Version		  "1.16.2"
 	  StartTime		  "0.0"
-	  StopTime		  "200"
+	  StopTime		  "500"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -241,7 +206,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  13
+	  $ObjectID		  9
 	  Version		  "1.16.2"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -279,7 +244,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  14
+	  $ObjectID		  10
 	  Version		  "1.16.2"
 	  Array {
 	    Type		    "Cell"
@@ -336,7 +301,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  15
+	  $ObjectID		  11
 	  Version		  "1.16.2"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -431,7 +396,7 @@ Model {
 	  AllowAutomaticUnitConversions	on
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  16
+	  $ObjectID		  12
 	  Version		  "1.16.2"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -473,7 +438,7 @@ Model {
 	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  17
+	  $ObjectID		  13
 	  Version		  "1.16.2"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  EnableRefExpFcnMdlSchedulingChecks on
@@ -489,7 +454,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  18
+	  $ObjectID		  14
 	  Version		  "1.16.2"
 	  SFSimEcho		  on
 	  SimCtrlC		  on
@@ -501,7 +466,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  19
+	  $ObjectID		  15
 	  Version		  "1.16.2"
 	  Array {
 	    Type		    "Cell"
@@ -567,7 +532,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      20
+	      $ObjectID		      16
 	      Version		      "1.16.2"
 	      Array {
 		Type			"Cell"
@@ -636,7 +601,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      21
+	      $ObjectID		      17
 	      Version		      "1.16.2"
 	      Array {
 		Type			"Cell"
@@ -723,7 +688,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  22
+	  $ObjectID		  18
 	  Version		  "1.16.2"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
@@ -756,7 +721,7 @@ Model {
 	  CovStopTime		  0
 	}
 	hdlcoderui.hdlcc {
-	  $ObjectID		  23
+	  $ObjectID		  19
 	  Version		  "1.16.2"
 	  Description		  "HDL Coder custom configuration component"
 	  Name			  "HDL Coder"
@@ -778,11 +743,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    11
+    $ObjectID		    7
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    24
+    $ObjectID		    20
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -860,6 +825,21 @@ Model {
       Outputs		      "4"
       DisplayOption	      "none"
       BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
     }
     Block {
       BlockType		      Inport
@@ -1003,14 +983,14 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "15"
+    SIDHighWatermark	    "17"
     Block {
       BlockType		      Constant
       Name		      "Constant"
       SID		      "9"
       Position		      [35, 70, 65, 100]
       ZOrder		      -5
-      Value		      "sin((1:50)*pi/25)"
+      Value		      "sin((1:80)*2*pi/80).^3"
     }
     Block {
       BlockType		      SubSystem
@@ -1026,7 +1006,7 @@ Model {
       System {
 	Name			"ILC"
 	Location		[630, 109, 1350, 779]
-	Open			on
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1042,7 +1022,7 @@ Model {
 	  BlockType		  Inport
 	  Name			  "Yseq"
 	  SID			  "5"
-	  Position		  [110, 103, 140, 117]
+	  Position		  [70, 123, 100, 137]
 	  ZOrder		  -1
 	  IconDisplay		  "Port number"
 	}
@@ -1050,10 +1030,21 @@ Model {
 	  BlockType		  Inport
 	  Name			  "y_k"
 	  SID			  "8"
-	  Position		  [110, 163, 140, 177]
+	  Position		  [70, 168, 100, 182]
 	  ZOrder		  -1
 	  Port			  "2"
 	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "17"
+	  Position		  [280, 315, 310, 345]
+	  ZOrder		  3
+	  Gain			  "0"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -1138,7 +1129,7 @@ Model {
 	      Position		      [180, 100, 230, 220]
 	      ZOrder		      16
 	      FunctionName	      "sf_sfun"
-	      Parameters	      "Nseq,gamma"
+	      Parameters	      "gamma"
 	      PortCounts	      "[4 5]"
 	      SFunctionDeploymentMode off
 	      EnableBusSupport	      on
@@ -1305,14 +1296,17 @@ Model {
 	  SaturateOnIntegerOverflow off
 	}
 	Block {
-	  BlockType		  UnitDelay
-	  Name			  "Uall"
-	  SID			  "12"
-	  Position		  [415, 293, 450, 327]
-	  ZOrder		  -18
-	  InitialCondition	  "zeros(Nseq,1)"
-	  InputProcessing	  "Elements as channels (sample based)"
-	  SampleTime		  "-1"
+	  BlockType		  Reference
+	  Name			  "Unit Delay\nExternal IC"
+	  SID			  "16"
+	  Ports			  [2, 1]
+	  Position		  [415, 302, 450, 338]
+	  ZOrder		  2
+	  LibraryVersion	  "1.386"
+	  SourceBlock		  "simulink/Additional Math\n& Discrete/Additional\nDiscrete/Unit Delay\nExternal IC"
+	  SourceType		  "Unit Delay External Initial Condition"
+	  ContentPreviewEnabled	  off
+	  tsamp			  "-1"
 	}
 	Block {
 	  BlockType		  UnitDelay
@@ -1350,18 +1344,18 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  2
+	  ZOrder		  13
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  4
 	  Points		  [30, 0; 0, 45]
-	  DstBlock		  "Uall"
+	  DstBlock		  "Unit Delay\nExternal IC"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  3
-	  SrcBlock		  "Uall"
+	  ZOrder		  14
+	  SrcBlock		  "Unit Delay\nExternal IC"
 	  SrcPort		  1
-	  Points		  [50, 0; 0, 40; -330, 0; 0, -130]
+	  Points		  [13, 0; 0, 64; -293, 0; 0, -164]
 	  DstBlock		  "MATLAB Function"
 	  DstPort		  3
 	}
@@ -1369,7 +1363,6 @@ Model {
 	  ZOrder		  4
 	  SrcBlock		  "y_k"
 	  SrcPort		  1
-	  Points		  [100, 0]
 	  DstBlock		  "MATLAB Function"
 	  DstPort		  2
 	}
@@ -1377,9 +1370,18 @@ Model {
 	  ZOrder		  5
 	  SrcBlock		  "Yseq"
 	  SrcPort		  1
-	  Points		  [50, 0; 0, 20]
-	  DstBlock		  "MATLAB Function"
-	  DstPort		  1
+	  Points		  [44, 0]
+	  Branch {
+	    ZOrder		    19
+	    DstBlock		    "MATLAB Function"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    17
+	    Points		    [0, 200]
+	    DstBlock		    "Gain"
+	    DstPort		    1
+	  }
 	}
 	Line {
 	  ZOrder		  6
@@ -1419,6 +1421,13 @@ Model {
 	  DstBlock		  "Sum"
 	  DstPort		  1
 	}
+	Line {
+	  ZOrder		  15
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Unit Delay\nExternal IC"
+	  DstPort		  2
+	}
       }
     }
     Block {
@@ -1426,7 +1435,7 @@ Model {
       Name		      "Mux"
       SID		      "10"
       Ports		      [2, 1]
-      Position		      [535, 56, 540, 94]
+      Position		      [610, 56, 615, 94]
       ZOrder		      -16
       ShowName		      off
       Inputs		      "2"
@@ -1437,35 +1446,35 @@ Model {
       Name		      "Scope"
       SID		      "3"
       Ports		      [1]
-      Position		      [580, 59, 610, 91]
+      Position		      [655, 59, 685, 91]
       ZOrder		      -3
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingSaveFormat','StructureWithTime','DataLoggingLimitDataPoints',true,'Data"
-      "LoggingDecimation','1','DataLoggingDecimateData',true),extmgr.Configuration('Visuals','Time Domain',true,'Serial"
-      "izedDisplays',{struct('MinYLimReal','-1.26063','MaxYLimReal','1.26983','YLabelReal','','MinYLimMag','0.00000','M"
-      "axYLimMag','1.26983','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0]"
-      ",'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0."
-      "0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0."
-      "0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.65098039215"
-      "6863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',2,'LineNames"
-      "',{{'ILC/yD_k','Transfer Fcn'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal"
-      "','-1.26063','MaxYLimReal','1.26983','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','1.26983','LegendVisibi"
-      "lity','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.68627450980392"
+      "ources','WiredSimulink',true,'DataLoggingSaveFormat','StructureWithTime','DataLoggingDecimation','1','DataLoggin"
+      "gDecimateData',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('MinYLimReal"
+      "','-1.50701','MaxYLimReal','1.51619','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','1.51619','LegendVisibi"
+      "lity','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.68627450980392"
       "2 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706"
       " 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529"
       " 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','Li"
-      "nePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Place"
-      "ment',1)),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true,"
-      "'Version','2016a')),'Version','2016a','Location',[66 106 1921 1079],'VisibleAtModelOpen','on')"
+      "nePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',2,'LineNames',{{'ILC/yD_k','Transfer Fcn'}},'S"
+      "howContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-1.50701','MaxYLimReal','1.5161"
+      "9','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','1.51619','LegendVisibility','Off','XGrid',true,'YGrid',t"
+      "rue,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803"
+      "922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.160784313"
+      "72549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.05882352941"
+      "17647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefin"
+      "edChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1)),extmgr.Configuration('To"
+      "ols','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measureme"
+      "nts',true,'Version','2016a')),'Version','2016a','Location',[66 106 1921 1079],'VisibleAtModelOpen','on')"
     }
     Block {
       BlockType		      TransferFcn
       Name		      "Transfer Fcn"
       SID		      "1"
-      Position		      [365, 58, 460, 112]
+      Position		      [440, 58, 535, 112]
       ZOrder		      -9
-      Denominator	      "[0.01 0.01 1]"
+      Denominator	      "[0.6 0.4 1.1]"
     }
     Line {
       ZOrder		      1
@@ -1474,7 +1483,7 @@ Model {
       Points		      [20, 0]
       Branch {
 	ZOrder			2
-	Points			[0, 125; -385, 0; 0, -90]
+	Points			[0, 125; -460, 0; 0, -90]
 	DstBlock		"ILC"
 	DstPort			2
       }
@@ -1495,7 +1504,7 @@ Model {
       ZOrder		      5
       SrcBlock		      "ILC"
       SrcPort		      2
-      Points		      [56, 0; 0, -80; 184, 0; 0, 25]
+      Points		      [56, 0; 0, -89; 294, 0]
       DstBlock		      "Mux"
       DstPort		      1
     }
@@ -1515,8 +1524,8 @@ Model {
     }
     Annotation {
       SID		      "15"
-      Name		      "dt=0.2\nNseq=50\ngamma=0.1"
-      Position		      [555, 184, 609, 222]
+      Name		      "dt=0.2\ngamma=0.1"
+      Position		      [630, 184, 684, 210]
       InternalMargins	      [0, 0, 0, 0]
       FixedHeight	      off
       FixedWidth	      off
@@ -1536,7 +1545,7 @@ Stateflow {
     name		    "ilc"
     created		    "13-Mar-2014 14:19:52"
     isLibrary		    0
-    firstTarget		    17
+    firstTarget		    16
     sfVersion		    80000009
   }
   chart {
@@ -1546,8 +1555,8 @@ Stateflow {
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1920 1080 1.333333333333333]
     treeNode		    [0 3 0 0]
-    firstTransition	    15
-    firstJunction	    14
+    firstTransition	    14
+    firstJunction	    13
     viewObj		    2
     visible		    1
     machine		    1
@@ -1577,11 +1586,12 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function [u_k,yD_k,k_new,Useq_new] = fcn(Yseq,y_k,Useq,k,Nseq,gamma)\n%#codegen\n\n% counter\nk_n"
-      "ew = k+1;\n% reset if we've been round the sequence\nif k_new>Nseq,\n    k_new=1;\nend\n\n% extract current dema"
-      "nd signal\nyD_k = Yseq(k);\n\n% and the current control\nu_k = Useq(k);\n\n% form the error\ne_k = yD_k - y_k;\n"
-      "\n% copy the control sequence over\nUseq_new = Useq;\n\n% which entry to update\nk_learn = k-1;\nif k_learn<1,\n"
-      "    k_learn=Nseq;\nend\n\n% do the learning update\nUseq_new(k_learn) = Useq_new(k_learn) + gamma*e_k;\n\n"
+      script		      "function [u_k,yD_k,k_new,Useq_new] = fcn(Yseq,y_k,Useq,k,gamma)\n%#codegen\n\n% number of element"
+      "s in sequence\nNseq = numel(Yseq);\n\n% counter\nk_new = k+1;\n% reset if we've been round the sequence\nif k_ne"
+      "w>Nseq,\n    k_new=1;\nend\n\n% extract current demand signal\nyD_k = Yseq(k);\n\n% and the current control\nu_k"
+      " = Useq(k);\n\n% form the error\ne_k = yD_k - y_k;\n\n% copy the control sequence over\nUseq_new = Useq;\n\n% wh"
+      "ich entry to update\nk_learn = k-1;\nif k_learn<1,\n    k_learn=Nseq;\nend\n\n% do the learning update\nUseq_new"
+      "(k_learn) = Useq_new(k_learn) + gamma*e_k;\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -1732,10 +1742,10 @@ Stateflow {
   }
   data {
     id			    10
-    ssIdNumber		    9
-    name		    "Nseq"
+    ssIdNumber		    11
+    name		    "k_new"
     linkNode		    [2 9 11]
-    scope		    PARAMETER_DATA
+    scope		    OUTPUT_DATA
     machine		    1
     props {
       array {
@@ -1748,7 +1758,7 @@ Stateflow {
 	wordLength		"16"
       }
       complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
+      frame		      SF_FRAME_NO
       unit {
 	name			"inherit"
       }
@@ -1757,8 +1767,8 @@ Stateflow {
   }
   data {
     id			    11
-    ssIdNumber		    11
-    name		    "k_new"
+    ssIdNumber		    12
+    name		    "Useq_new"
     linkNode		    [2 10 12]
     scope		    OUTPUT_DATA
     machine		    1
@@ -1782,36 +1792,10 @@ Stateflow {
   }
   data {
     id			    12
-    ssIdNumber		    12
-    name		    "Useq_new"
-    linkNode		    [2 11 13]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    13
     ssIdNumber		    13
     name		    "gamma"
-    linkNode		    [2 12 0]
+    linkNode		    [2 11 0]
     scope		    PARAMETER_DATA
-    paramIndexForInitFromWorkspace 1
     machine		    1
     props {
       array {
@@ -1832,7 +1816,7 @@ Stateflow {
     dataType		    "Inherit: Same as Simulink"
   }
   junction {
-    id			    14
+    id			    13
     position		    [23.5747 49.5747 7]
     chart		    2
     linkNode		    [2 0 0]
@@ -1841,7 +1825,7 @@ Stateflow {
     type		    CONNECTIVE_JUNCTION
   }
   transition {
-    id			    15
+    id			    14
     labelString		    "{eML_blk_kernel();}"
     labelPosition	    [32.125 19.875 102.544 14.964]
     fontSize		    12
@@ -1849,7 +1833,7 @@ Stateflow {
       intersection	      [0 0 1 0 23.5747 14.625 0 0]
     }
     dst {
-      id		      14
+      id		      13
       intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
     }
     midPoint		    [23.5747 24.9468]
@@ -1865,13 +1849,13 @@ Stateflow {
     ssIdNumber		    2
   }
   instance {
-    id			    16
+    id			    15
     name		    "ILC/MATLAB Function"
     machine		    1
     chart		    2
   }
   target {
-    id			    17
+    id			    16
     name		    "sfun"
     description		    "Default Simulink S-Function Target."
     machine		    1
