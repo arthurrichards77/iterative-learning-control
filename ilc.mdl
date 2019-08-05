@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.21"
+    ComputedModelVersion    "1.22"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -58,7 +58,7 @@ Model {
 	LoadSaveID		"0"
 	Extents			[972.0, 413.0]
 	ZoomFactor		[1.0]
-	Offset			[0.0, 0.0]
+	Offset			[-18.997262418270111, 0.0]
       }
     }
   }
@@ -68,9 +68,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "aeagr"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Aug 05 17:46:03 2019"
-  RTWModifiedTimeStamp	  486927910
-  ModelVersionFormat	  "1.%<AutoIncrement:21>"
+  LastModifiedDate	  "Mon Aug 05 17:50:55 2019"
+  RTWModifiedTimeStamp	  486928207
+  ModelVersionFormat	  "1.%<AutoIncrement:22>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -983,29 +983,21 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "17"
-    Block {
-      BlockType		      Constant
-      Name		      "Constant"
-      SID		      "9"
-      Position		      [35, 70, 65, 100]
-      ZOrder		      -5
-      Value		      "sin((1:80)*2*pi/80).^3"
-    }
+    SIDHighWatermark	    "22"
     Block {
       BlockType		      SubSystem
       Name		      "ILC"
       SID		      "4"
-      Ports		      [2, 2]
-      Position		      [140, 66, 240, 139]
-      ZOrder		      -4
+      Ports		      [1, 2]
+      Position		      [200, 66, 300, 139]
+      ZOrder		      3
       TreatAsAtomicUnit	      on
       SystemSampleTime	      "dt"
       RequestExecContextInheritance off
       Variant		      off
       System {
 	Name			"ILC"
-	Location		[630, 109, 1350, 779]
+	Location		[224, 262, 1250, 868]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1020,19 +1012,10 @@ Model {
 	ZoomFactor		"100"
 	Block {
 	  BlockType		  Inport
-	  Name			  "Yseq"
-	  SID			  "5"
-	  Position		  [70, 123, 100, 137]
-	  ZOrder		  -1
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
 	  Name			  "y_k"
 	  SID			  "8"
 	  Position		  [70, 168, 100, 182]
 	  ZOrder		  -1
-	  Port			  "2"
 	  IconDisplay		  "Port number"
 	}
 	Block {
@@ -1201,28 +1184,28 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      11
+	      ZOrder		      1
 	      SrcBlock		      "Yseq"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      12
+	      ZOrder		      2
 	      SrcBlock		      "y_k"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      13
+	      ZOrder		      3
 	      SrcBlock		      "Useq"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      14
+	      ZOrder		      4
 	      SrcBlock		      "k"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -1230,7 +1213,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "u_k"
-	      ZOrder		      15
+	      ZOrder		      5
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -1240,7 +1223,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "yD_k"
-	      ZOrder		      16
+	      ZOrder		      6
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      3
@@ -1249,7 +1232,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "k_new"
-	      ZOrder		      17
+	      ZOrder		      7
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      4
@@ -1258,7 +1241,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "Useq_new"
-	      ZOrder		      18
+	      ZOrder		      8
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      5
@@ -1266,14 +1249,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      19
+	      ZOrder		      9
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      20
+	      ZOrder		      10
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -1319,6 +1302,14 @@ Model {
 	  SampleTime		  "-1"
 	}
 	Block {
+	  BlockType		  Constant
+	  Name			  "yseq"
+	  SID			  "9"
+	  Position		  [70, 115, 100, 145]
+	  ZOrder		  4
+	  Value			  "sin((1:80)*2*pi/80).^3"
+	}
+	Block {
 	  BlockType		  Outport
 	  Name			  "u_k"
 	  SID			  "6"
@@ -1344,7 +1335,7 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  13
+	  ZOrder		  2
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  4
 	  Points		  [30, 0; 0, 45]
@@ -1352,7 +1343,7 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  14
+	  ZOrder		  3
 	  SrcBlock		  "Unit Delay\nExternal IC"
 	  SrcPort		  1
 	  Points		  [13, 0; 0, 64; -293, 0; 0, -164]
@@ -1368,23 +1359,23 @@ Model {
 	}
 	Line {
 	  ZOrder		  5
-	  SrcBlock		  "Yseq"
+	  SrcBlock		  "yseq"
 	  SrcPort		  1
 	  Points		  [44, 0]
 	  Branch {
-	    ZOrder		    19
+	    ZOrder		    6
 	    DstBlock		    "MATLAB Function"
 	    DstPort		    1
 	  }
 	  Branch {
-	    ZOrder		    17
+	    ZOrder		    7
 	    Points		    [0, 200]
 	    DstBlock		    "Gain"
 	    DstPort		    1
 	  }
 	}
 	Line {
-	  ZOrder		  6
+	  ZOrder		  8
 	  SrcBlock		  "k"
 	  SrcPort		  1
 	  Points		  [75, 0; 0, 130; -330, 0; 0, -105]
@@ -1392,12 +1383,12 @@ Model {
 	  DstPort		  4
 	}
 	Line {
-	  ZOrder		  8
+	  ZOrder		  9
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  2
 	  Points		  [160, 0]
 	  Branch {
-	    ZOrder		    12
+	    ZOrder		    10
 	    DstBlock		    "Sum"
 	    DstPort		    2
 	  }
@@ -1408,21 +1399,21 @@ Model {
 	  }
 	}
 	Line {
-	  ZOrder		  9
+	  ZOrder		  12
 	  SrcBlock		  "Sum"
 	  SrcPort		  1
 	  DstBlock		  "u_k"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  10
+	  ZOrder		  13
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  1
 	  DstBlock		  "Sum"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  15
+	  ZOrder		  14
 	  SrcBlock		  "Gain"
 	  SrcPort		  1
 	  DstBlock		  "Unit Delay\nExternal IC"
@@ -1435,7 +1426,7 @@ Model {
       Name		      "Mux"
       SID		      "10"
       Ports		      [2, 1]
-      Position		      [610, 56, 615, 94]
+      Position		      [630, 76, 635, 114]
       ZOrder		      -16
       ShowName		      off
       Inputs		      "2"
@@ -1446,7 +1437,7 @@ Model {
       Name		      "Scope"
       SID		      "3"
       Ports		      [1]
-      Position		      [655, 59, 685, 91]
+      Position		      [680, 79, 710, 111]
       ZOrder		      -3
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
@@ -1457,7 +1448,7 @@ Model {
       "2 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706"
       " 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529"
       " 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','Li"
-      "nePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',2,'LineNames',{{'ILC/yD_k','Transfer Fcn'}},'S"
+      "nePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',2,'LineNames',{{'Transfer Fcn','ILC/yD_k'}},'S"
       "howContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-1.50701','MaxYLimReal','1.5161"
       "9','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','1.51619','LegendVisibility','Off','XGrid',true,'YGrid',t"
       "rue,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803"
@@ -1472,7 +1463,7 @@ Model {
       BlockType		      TransferFcn
       Name		      "Transfer Fcn"
       SID		      "1"
-      Position		      [440, 58, 535, 112]
+      Position		      [400, 58, 495, 112]
       ZOrder		      -9
       Denominator	      "[0.6 0.4 1.1]"
     }
@@ -1480,33 +1471,18 @@ Model {
       ZOrder		      1
       SrcBlock		      "Transfer Fcn"
       SrcPort		      1
-      Points		      [20, 0]
+      Points		      [60, 0]
       Branch {
-	ZOrder			2
-	Points			[0, 125; -460, 0; 0, -90]
+	ZOrder			23
+	Points			[0, 106; -410, 0; 0, -86]
 	DstBlock		"ILC"
-	DstPort			2
+	DstPort			1
       }
       Branch {
-	ZOrder			3
+	ZOrder			21
 	DstBlock		"Mux"
-	DstPort			2
+	DstPort			1
       }
-    }
-    Line {
-      ZOrder		      4
-      SrcBlock		      "Constant"
-      SrcPort		      1
-      DstBlock		      "ILC"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      5
-      SrcBlock		      "ILC"
-      SrcPort		      2
-      Points		      [56, 0; 0, -89; 294, 0]
-      DstBlock		      "Mux"
-      DstPort		      1
     }
     Line {
       ZOrder		      8
@@ -1516,7 +1492,15 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      14
+      ZOrder		      25
+      SrcBlock		      "ILC"
+      SrcPort		      2
+      Points		      [56, 0; 0, 16; 212, 0; 0, -31]
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      26
       SrcBlock		      "ILC"
       SrcPort		      1
       DstBlock		      "Transfer Fcn"
@@ -1558,7 +1542,6 @@ Stateflow {
     firstTransition	    14
     firstJunction	    13
     viewObj		    2
-    visible		    1
     machine		    1
     subviewS {
     }
