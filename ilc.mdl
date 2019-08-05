@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.22"
+    ComputedModelVersion    "1.24"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -68,9 +68,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "aeagr"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Aug 05 17:50:55 2019"
-  RTWModifiedTimeStamp	  486928207
-  ModelVersionFormat	  "1.%<AutoIncrement:22>"
+  LastModifiedDate	  "Mon Aug 05 17:57:14 2019"
+  RTWModifiedTimeStamp	  486928616
+  ModelVersionFormat	  "1.%<AutoIncrement:24>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -995,6 +995,37 @@ Model {
       SystemSampleTime	      "dt"
       RequestExecContextInheritance off
       Variant		      off
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		21
+	$ClassName		"Simulink.Mask"
+	Array {
+	  Type			  "Simulink.MaskParameter"
+	  Dimension		  3
+	  Object {
+	    $ObjectID		    22
+	    Type		    "edit"
+	    Name		    "Yseq"
+	    Prompt		    "Target output sequence"
+	    Value		    "sin((1:80)*2*pi/80).^3"
+	  }
+	  Object {
+	    $ObjectID		    23
+	    Type		    "edit"
+	    Name		    "dt"
+	    Prompt		    "Time step"
+	    Value		    "0.2"
+	  }
+	  Object {
+	    $ObjectID		    24
+	    Type		    "edit"
+	    Name		    "gamma"
+	    Prompt		    "Learning rate"
+	    Value		    "0.1"
+	  }
+	  PropName		  "Parameters"
+	}
+      }
       System {
 	Name			"ILC"
 	Location		[224, 262, 1250, 868]
@@ -1307,7 +1338,7 @@ Model {
 	  SID			  "9"
 	  Position		  [70, 115, 100, 145]
 	  ZOrder		  4
-	  Value			  "sin((1:80)*2*pi/80).^3"
+	  Value			  "Yseq"
 	}
 	Block {
 	  BlockType		  Outport
