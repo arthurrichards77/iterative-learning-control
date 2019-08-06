@@ -1,7 +1,7 @@
 # iterative-learning-control
 
-*Tested in Matlab R2016a on Linux: everything but the drone example
-*Tested in R2018a on Windows: everything
+* Tested in Matlab R2016a on Linux: everything but the drone example
+* Tested in R2018a on Windows: everything
 
 ## Simulink implementation of iterative learning control (ILC)
 
