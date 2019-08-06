@@ -1,6 +1,6 @@
 # iterative-learning-control
 
-Tested in Matlab R2016a on Linux
+Tested in Matlab R2016a on Linux and R2018a on Windows.
 
 ## Simulink implementation of iterative learning control (ILC)
 
