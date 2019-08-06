@@ -9,7 +9,7 @@
 
 The 'Transport Delay' and 'Transfer Fcn' represent the dynamics of the system we wish to control.  The ILC block attempts to learn a set of inputs to achieve a desired output sequence, by repeating the input sequence multiple times with feedback corrections due to error each time.
 
-The fundamental update equation is u(k+N-1) = u(k-1) + gamma*e(k) where u is the input, k is the time step, N is the length of the repeating sequence, gamma is the learning rate and e(k) = yDes(k mod N) - y(k) is the error between the desired output yDes and the achieved output y.  In short, the previous input in the sequence, next time round, is corrected using the current measured error.  The initial settings are equal to the desired sequence, u(k)=yDes(k) for k=1..N, assuming that the system, perhaps with a simple controller, will already attempt to follow the input.
+The fundamental update equation is u(k+N-p) = u(k-1) + g*e(k) where u is the input, k is the time step, N is the length of the repeating sequence, p is the learning offset, g is the learning rate and e(k) = yDes(k mod N) - y(k) is the error between the desired output yDes and the achieved output y.  In short, the input p steps back in the sequence, next time round, is corrected using the current measured error.  The initial settings are equal to the desired sequence, u(k)=yDes(k) for k=1..N, assuming that the system, perhaps with a simple controller, will already attempt to follow the input.
 
 ## Simple example
 
@@ -35,3 +35,7 @@ Medium gamma
 
 ![High gamma](https://raw.githubusercontent.com/arthurrichards77/iterative-learning-control/master/rate_fast.png)
 High gamma
+
+## Drone example
+
+The file ilc_drone.mdl represents one translational axis of a Parrot AR Drone, with delayed dynamics as identified by Greatwood and Richards (2019) and stabilized by a simple PD controller.  This example uses a longer tracking offset, p=9, to accommodate the delay and relatively slow response of the drone.
