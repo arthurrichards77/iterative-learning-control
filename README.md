@@ -3,7 +3,17 @@
 * Tested in Matlab R2016a on Linux: everything but the drone example
 * Tested in R2018a on Windows: everything
 
-## Simulink implementation of iterative learning control (ILC)
+## Introduction to iterative learning control (ILC)
+
+> ILC is a design tool that can be used to overcome the shortcomings of traditional controller design, especially for obtaining a desired transient response, for the special case when the system of interest operates repetitively
+
+Ahn, H.-S.; Chen, Y. & Moore, K. L., Iterative Learning Control: Brief Survey and Categorization, IEEE Transactions on Systems, Man and Cybernetics, Part C (Applications and Reviews), Institute of Electrical and Electronics Engineers (IEEE), 2007, 37, 1099-1121, [DOI: 10.1109/TSMCC.2007.905759](https://doi.org/10.1109/TSMCC.2007.905759)
+
+This code implements so-called Arimoto-type discrete time ILC (see reference above).  It requires a periodic demand signal, and treats each period as a learning episode.  Each episode learns from the last.
+
+ILC works great when you have a system which is static but not well-known.  However, it will get confused if dynamic disturbances are present.  You can't expect to learn by repetition if your problem isn't repeatable.
+
+## Simulink implementation of ILC
 
 ![Simulink model ilc.mdl](https://raw.githubusercontent.com/arthurrichards77/iterative-learning-control/master/ilc_mdl.png)
 
